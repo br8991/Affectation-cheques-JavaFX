@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fdc107cd-daeb-47f6-903c-5fc577f52e65">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DB_FACTURE_CHEQUE_SOTROB"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="e3445f7c-717c-4712-9134-5ffc40b7c477">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DB_FACTURE_CHEQUE_SOTROB"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT * FROM Fournisseurs]]>
+		</queryString>
+		<field name="code_fournisseur" class="java.lang.Object">
+			<property name="com.jaspersoft.studio.field.name" value="code_fournisseur"/>
+			<property name="com.jaspersoft.studio.field.label" value="code_fournisseur"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+		</field>
+		<field name="fournisseur" class="java.lang.Object">
+			<property name="com.jaspersoft.studio.field.name" value="fournisseur"/>
+			<property name="com.jaspersoft.studio.field.label" value="fournisseur"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+		</field>
+		<field name="adresse" class="java.lang.Object">
+			<property name="com.jaspersoft.studio.field.name" value="adresse"/>
+			<property name="com.jaspersoft.studio.field.label" value="adresse"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+		</field>
+		<field name="num_telephone" class="java.lang.Object">
+			<property name="com.jaspersoft.studio.field.name" value="num_telephone"/>
+			<property name="com.jaspersoft.studio.field.label" value="num_telephone"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+		</field>
+		<field name="num_registre_comerce" class="java.lang.Object">
+			<property name="com.jaspersoft.studio.field.name" value="num_registre_comerce"/>
+			<property name="com.jaspersoft.studio.field.label" value="num_registre_comerce"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+		</field>
+		<field name="code_fiscale" class="java.lang.Object">
+			<property name="com.jaspersoft.studio.field.name" value="code_fiscale"/>
+			<property name="com.jaspersoft.studio.field.label" value="code_fiscale"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+		</field>
+		<field name="article_positif" class="java.lang.Object">
+			<property name="com.jaspersoft.studio.field.name" value="article_positif"/>
+			<property name="com.jaspersoft.studio.field.label" value="article_positif"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+		</field>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM Fournisseurs]]>
+	</queryString>
+	<field name="code_fournisseur" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="code_fournisseur"/>
+		<property name="com.jaspersoft.studio.field.label" value="code_fournisseur"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+	</field>
+	<field name="fournisseur" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="fournisseur"/>
+		<property name="com.jaspersoft.studio.field.label" value="fournisseur"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+	</field>
+	<field name="adresse" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="adresse"/>
+		<property name="com.jaspersoft.studio.field.label" value="adresse"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+	</field>
+	<field name="num_telephone" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="num_telephone"/>
+		<property name="com.jaspersoft.studio.field.label" value="num_telephone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+	</field>
+	<field name="num_registre_comerce" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="num_registre_comerce"/>
+		<property name="com.jaspersoft.studio.field.label" value="num_registre_comerce"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+	</field>
+	<field name="code_fiscale" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="code_fiscale"/>
+		<property name="com.jaspersoft.studio.field.label" value="code_fiscale"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+	</field>
+	<field name="article_positif" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="article_positif"/>
+		<property name="com.jaspersoft.studio.field.label" value="article_positif"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="180" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="555" height="150" uuid="730bf125-7a2d-4163-a9e0-793a5595aacd"/>
+				<imageExpression><![CDATA["src\\images\\entete_sotrob.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="49" uuid="ef8f3452-d645-4796-b994-589bff2350be"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[LISTE FOURNISSEURS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="0" width="555" height="37" uuid="b4af7c5e-0a48-4c4a-9cd1-b1f2742952e8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="330" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="0" width="555" height="330" uuid="2c01003f-392c-47fe-881d-5f664bc87518">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="6c7ac6f2-b1ec-4f40-9b71-93f69dd75fe3">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="50" uuid="b269bcdd-cdf5-464a-b430-407d0536e115">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="95feaf91-4354-4930-bf38-ebbb9d508b38"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[CODE]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="38d20bc2-8bbf-4d02-b16d-cffc2870d5ae">
+									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="12"/>
+									<paragraph spacingBefore="2" spacingAfter="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{code_fournisseur}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="70d8e5d0-41c9-4ff4-ae65-aa5ace3baaaa">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="120" height="30" uuid="4c709da8-183b-4709-9f47-4a2a3fde5889"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[FOURNISSEUR]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="120" height="30" uuid="9db54868-a22b-4769-8150-e8144f405d80">
+									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="12"/>
+									<paragraph spacingBefore="2" spacingAfter="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{fournisseur}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="89" uuid="f0bccf8b-9988-4975-a789-5ccb823525a2">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="89" height="30" uuid="338cb7c1-edcd-4566-bdcb-10c108e59fa0"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[ADRESSE]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="89" height="30" uuid="b9d61707-59fd-4c73-9a17-ecc997d42c7c">
+									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="12"/>
+									<paragraph spacingBefore="2" spacingAfter="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{adresse}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="81" uuid="3b6252fa-f712-43e7-b568-27e522494c8b">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="81" height="30" uuid="2a0c90ea-b941-4e2e-8f33-dce245621525"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[TELEPHONE]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="81" height="30" uuid="504b8777-c4e5-40b4-b543-549c77acda33">
+									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="12"/>
+									<paragraph spacingBefore="2" spacingAfter="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{num_telephone}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="0a16fd9a-69cc-4e4a-b894-9a417b454d67">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="0e367360-4861-43bc-a879-2ab4bfa9b90c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[N° REGISTRE]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="30" uuid="277c68e4-195d-45d8-bd6d-b5dd339c80c7">
+									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="12"/>
+									<paragraph spacingBefore="2" spacingAfter="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{num_registre_comerce}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="74" uuid="c29e3d52-fb26-4be7-836e-5cfce642e85a">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="74" height="30" uuid="fdd2b08d-4491-482b-9686-d6794012bdc7"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[CODE FISCALE]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="74" height="30" uuid="e1f491d0-4aad-48ae-9127-160e0216d209">
+									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="12"/>
+									<paragraph spacingBefore="2" spacingAfter="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{code_fiscale}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="65" uuid="c9b970f2-058f-42b8-b02d-5cbfc92c607c">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="65" height="30" uuid="70c21529-3f36-4fc5-a0fd-aa85c1fdcb7c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[ARTICLE POSITIF]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="65" height="30" uuid="b31e0d73-4049-4448-b80c-d95ac71995e6">
+									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="12"/>
+									<paragraph spacingBefore="2" spacingAfter="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{article_positif}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="555" height="79" uuid="49f42f82-4ec6-4c19-bb0a-55e7b339c5df"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[                           Signature]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="555" height="26" uuid="a546f623-053f-44cd-8f3e-3b6fbc996d65"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="15" splitType="Stretch"/>
+	</summary>
+</jasperReport>

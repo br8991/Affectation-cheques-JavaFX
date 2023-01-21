@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fdc107cd-daeb-47f6-903c-5fc577f52e65">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DB_FACTURE_CHEQUE_SOTROB"/>
+	<subDataset name="Dataset1" uuid="e3445f7c-717c-4712-9134-5ffc40b7c477">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DB_FACTURE_CHEQUE_SOTROB"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT * FROM Fournisseurs]]>
+		</queryString>
+		<field name="code_fournisseur" class="java.lang.Object">
+			<property name="com.jaspersoft.studio.field.name" value="code_fournisseur"/>
+			<property name="com.jaspersoft.studio.field.label" value="code_fournisseur"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+		</field>
+		<field name="fournisseur" class="java.lang.Object">
+			<property name="com.jaspersoft.studio.field.name" value="fournisseur"/>
+			<property name="com.jaspersoft.studio.field.label" value="fournisseur"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+		</field>
+		<field name="adresse" class="java.lang.Object">
+			<property name="com.jaspersoft.studio.field.name" value="adresse"/>
+			<property name="com.jaspersoft.studio.field.label" value="adresse"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+		</field>
+		<field name="num_telephone" class="java.lang.Object">
+			<property name="com.jaspersoft.studio.field.name" value="num_telephone"/>
+			<property name="com.jaspersoft.studio.field.label" value="num_telephone"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+		</field>
+		<field name="num_registre_comerce" class="java.lang.Object">
+			<property name="com.jaspersoft.studio.field.name" value="num_registre_comerce"/>
+			<property name="com.jaspersoft.studio.field.label" value="num_registre_comerce"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+		</field>
+		<field name="code_fiscale" class="java.lang.Object">
+			<property name="com.jaspersoft.studio.field.name" value="code_fiscale"/>
+			<property name="com.jaspersoft.studio.field.label" value="code_fiscale"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+		</field>
+		<field name="article_positif" class="java.lang.Object">
+			<property name="com.jaspersoft.studio.field.name" value="article_positif"/>
+			<property name="com.jaspersoft.studio.field.label" value="article_positif"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+		</field>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM Fournisseurs]]>
+	</queryString>
+	<field name="code_fournisseur" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="code_fournisseur"/>
+		<property name="com.jaspersoft.studio.field.label" value="code_fournisseur"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+	</field>
+	<field name="fournisseur" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="fournisseur"/>
+		<property name="com.jaspersoft.studio.field.label" value="fournisseur"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+	</field>
+	<field name="adresse" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="adresse"/>
+		<property name="com.jaspersoft.studio.field.label" value="adresse"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+	</field>
+	<field name="num_telephone" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="num_telephone"/>
+		<property name="com.jaspersoft.studio.field.label" value="num_telephone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+	</field>
+	<field name="num_registre_comerce" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="num_registre_comerce"/>
+		<property name="com.jaspersoft.studio.field.label" value="num_registre_comerce"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+	</field>
+	<field name="code_fiscale" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="code_fiscale"/>
+		<property name="com.jaspersoft.studio.field.label" value="code_fiscale"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+	</field>
+	<field name="article_positif" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="article_positif"/>
+		<property name="com.jaspersoft.studio.field.label" value="article_positif"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Fournisseurs"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="180" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="555" height="150" uuid="730bf125-7a2d-4163-a9e0-793a5595aacd"/>
+				<imageExpression><![CDATA["src\\images\\entete_sotrob.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="49" uuid="ef8f3452-d645-4796-b994-589bff2350be"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[LISTE FACTURES]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="0" width="555" height="37" uuid="b4af7c5e-0a48-4c4a-9cd1-b1f2742952e8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="330" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="555" height="79" uuid="49f42f82-4ec6-4c19-bb0a-55e7b339c5df"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[                           Signature]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="555" height="26" uuid="a546f623-053f-44cd-8f3e-3b6fbc996d65"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="15" splitType="Stretch"/>
+	</summary>
+</jasperReport>

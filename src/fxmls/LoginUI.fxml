@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="238.0" prefWidth="407.0" style="-fx-background-color: white; -fx-border-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="controllers.LoginController">
+   <children>
+      <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="238.0" prefWidth="407.0">
+               <children>
+                  <Label layoutX="59.0" layoutY="89.0" prefHeight="30.0" prefWidth="94.0" text="Username :">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="59.0" layoutY="132.0" prefHeight="30.0" prefWidth="94.0" text="Password :">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tf_username" alignment="CENTER" layoutX="166.0" layoutY="89.0" prefHeight="30.0" prefWidth="162.0" style="-fx-border-color: black;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="166.0" layoutY="184.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="162.0" style="-fx-background-color: green;" text="LOGIN" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" layoutX="361.0" layoutY="12.0" mnemonicParsing="false" onAction="#exit" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: red;" text="X" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <PasswordField fx:id="tf_password" alignment="CENTER" layoutX="166.0" layoutY="132.0" prefHeight="30.0" prefWidth="162.0" style="-fx-border-color: black;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </PasswordField>
+                  <Label layoutX="59.0" layoutY="13.0" prefHeight="26.0" prefWidth="240.0" text="FACTURES ET CHEQUES">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

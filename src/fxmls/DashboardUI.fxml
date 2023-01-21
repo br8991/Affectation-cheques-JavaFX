@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardUIController">
+   <children>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="50.0" tabMinWidth="100.0" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab style="-fx-font-size: 20; -fx-padding: 10;" text="AFFECTATION">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <VBox BorderPane.alignment="CENTER">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="1140.0">
+                                             <VBox.margin>
+                                                <Insets left="30.0" right="30.0" />
+                                             </VBox.margin>
+                                             <children>
+                                                <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnAffectation" prefWidth="100.0" style="-fx-background-color: GREEN; -fx-text-fill: white;" text="AFFECTER" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnSupprimerAffectation" prefWidth="100.0" style="-fx-background-color: RED; -fx-text-fill: white;" text="SUPPRIMER" textAlignment="CENTER">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" right="50.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Button>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search Bar : ">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="tf_affectation_search" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                          <TableView fx:id="tbview_affectation" onMouseClicked="#onMouseClickedAffectation">
+                                            <columns>
+                                              <TableColumn fx:id="col_affectation_fournisseur" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="250.0" text="FOURNISSEUR" />
+                                              <TableColumn fx:id="col_affectation_num_cheque" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="NUM CHEQUE" />
+                                                <TableColumn fx:id="col_affectation_date_cheque" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="DATE CHEQUE" />
+                                                <TableColumn fx:id="col_affectation_montant_cheque" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="MONTANT CHEQUE" />
+                                                <TableColumn fx:id="col_affectation_num_facture" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="NUM FACTURE" />
+                                                <TableColumn fx:id="col_affectation_date_facture" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="DATE FACTURE" />
+                                                <TableColumn fx:id="col_affectation_montant_facture" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="MONTANT FACTURE" />
+                                                <TableColumn fx:id="col_affectation_bc" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="BC" />
+                                                <TableColumn fx:id="col_affectation_br" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="BR" />
+                                                <TableColumn fx:id="col_affectation_reste_cheque" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="RESTE CHEQUE" />
+                                                <TableColumn fx:id="col_affectation_reste_facture" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="-1.0" text="RESTE FACTURE" />
+                                            </columns>
+                                             <VBox.margin>
+                                                <Insets bottom="30.0" left="30.0" right="30.0" top="10.0" />
+                                             </VBox.margin>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                 </center>
+                                 <top>
+                                    <HBox alignment="CENTER" prefHeight="130.0" BorderPane.alignment="CENTER">
+                                       <BorderPane.margin>
+                                          <Insets bottom="30.0" right="30.0" top="30.0" />
+                                       </BorderPane.margin>
+                                       <children>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numero Cheque : ">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="20.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <TextField fx:id="tf_affectation_num_cheque" alignment="CENTER" onKeyReleased="#getChequeMontantRestant" prefWidth="250.0">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Montant Restant :">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Label fx:id="lb_affectation_montant_cheque_restant" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: black; -fx-text-fill: white;" textAlignment="CENTER">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
+                                             <children>
+                                                <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numero Facture : ">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="20.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <TextField fx:id="tf_affectation_num_facture" alignment="CENTER" onKeyReleased="#getFactureMontantRestant" prefWidth="250.0">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Montant Restant :">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Label fx:id="lb_affectation_montant_facture_restant" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: black; -fx-text-fill: white;" textAlignment="CENTER">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="488.0" layoutY="10.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TOTALE CHEQUE : ">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Label fx:id="lb_affectation_totale_cheque_payee" text="0.00" textFill="#03b530">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </HBox>
+                                                <HBox alignment="CENTER_RIGHT" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TOTALE FACTURE : ">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Label fx:id="lb_affectation_totale_facture_payee" text="0.00" textFill="RED">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </HBox>
+                                                <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="60.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="RESTE CHEQUE = ">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <Label fx:id="lb_affectation_reste_impayee_cheque" text="0.00" textFill="#2581c3">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </HBox>
+                                                <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="115.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="RESTE FACTURE =">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Label fx:id="lb_affectation_reste_impayee_facture" text="0.00" textFill="#2581c3">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </HBox>
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </top>
+                              </BorderPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab style="-fx-font-size: 20; -fx-padding: 10;" text="CHEQUE">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <left>
+                                    <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="300.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label prefWidth="250.0" text="Numéro Cheque :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tf_cheque_num_cheque" maxWidth="-Infinity" onKeyReleased="#NumChequeExiste" prefHeight="25.0" prefWidth="250.0" />
+                                                <Label fx:id="lb_num_cheque_existe" prefWidth="250.0" text="DEJA EXISTE !!!!" textFill="RED" visible="false">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label prefWidth="250.0" text="Fournisseur :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tf_cheque_fournisseur" maxWidth="-Infinity" prefHeight="25.0" prefWidth="250.0" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label prefWidth="250.0" text="Montant Cheque :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tf_cheque_montant_cheque" maxWidth="-Infinity" prefWidth="250.0" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label prefWidth="250.0" text="Date Cheque :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <DatePicker fx:id="dp_cheque_date_cheque" prefWidth="250.0" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </left>
+                                 <center>
+                                    <BorderPane BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="tbview_cheque" onMouseClicked="#MouseSelectCheque" BorderPane.alignment="CENTER">
+                                            <columns>
+                                              <TableColumn fx:id="col_cheque_nom_fournisseur" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="300.0" text="Fournisseur" />
+                                              <TableColumn fx:id="col_cheque_date" maxWidth="1.7976931348623157E308" minWidth="70.0" prefWidth="150.0" text="Date Cheque" />
+                                                <TableColumn fx:id="col_cheque_num" maxWidth="1.7976931348623157E308" minWidth="80.0" prefWidth="150.0" text="Numero Cheque" />
+                                                <TableColumn fx:id="col_cheque_montant" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="Montant Cheque Reste" />
+                                                <TableColumn fx:id="col_cheque_montant_primaire" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="Montant Cheque Primaire" />
+                                            </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="50.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#btnAjouterCheque" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: GREEN;" text="AJOUTER" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets right="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Tahoma" size="15.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" onAction="#btnSupprimerCheque" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: RED;" text="SUPPRIMER" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets right="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Tahoma" size="15.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" onAction="#btnModifierCheque" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: GREY;" text="MODIFIER" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets right="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Tahoma" size="15.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" onAction="#btnClearFieldsCheque" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: ORANGE;" text="VIDER" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Tahoma" size="15.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <TextField fx:id="tf_cheque_search" prefHeight="30.0" prefWidth="200.0" promptText="Rechercher">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets top="20.0" />
+                                             </BorderPane.margin>
+                                          </HBox>
+                                       </top>
+                                       <BorderPane.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </BorderPane.margin>
+                                       <bottom>
+                                          <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="50.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#btnImprimerCheques" prefWidth="100.0" text="IMPRIMER">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" prefWidth="100.0" text="EXPORT">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Label text="TOTALE CHEQUE RESTANT : ">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="lb_montant_cheque_total_restant" text="0.00" textFill="#00da45">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_RIGHT" layoutX="460.0" layoutY="10.0" maxWidth="1.7976931348623157E308">
+                                                   <children>
+                                                      <Label text="TOTALE  CHEQUE PRIMAIRE : ">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="lb_montant_cheque_total" text="0.00" textFill="#00da45">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets bottom="20.0" />
+                                             </BorderPane.margin>
+                                          </HBox>
+                                       </bottom>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab style="-fx-font-size: 20; -fx-padding: 10;" text="FACTURE">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <left>
+                                    <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="300.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label prefWidth="250.0" text="Numéro Facture :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tf_facture_num_facture" maxWidth="-Infinity" onKeyReleased="#NumFactureExiste" prefHeight="25.0" prefWidth="250.0" />
+                                                <Label fx:id="lb_num_facture_existe" prefWidth="250.0" text="DEJA EXISTE !!!!" textFill="RED" visible="false">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label prefWidth="250.0" text="Fournisseur :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tf_facture_fournisseurs" maxWidth="-Infinity" prefHeight="25.0" prefWidth="250.0" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label prefWidth="250.0" text="Montant Facture :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tf_facture_montant_facture" maxWidth="-Infinity" prefWidth="250.0" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label prefWidth="250.0" text="Date Facture :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <DatePicker fx:id="dp_facture_date_facture" prefWidth="250.0" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label prefWidth="250.0" text="Bon de Commande :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tf_facture_bc_facture" maxWidth="-Infinity" prefWidth="250.0" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label prefWidth="250.0" text="Bon de Reception :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tf_facture_br_facture" maxWidth="-Infinity" prefWidth="250.0" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <HBox alignment="CENTER">
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </left>
+                                 <center>
+                                    <BorderPane BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="tbview_facture" onMouseClicked="#MouseSelectFactureRow" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn fx:id="col_facture_nom_fournisseur" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="300.0" text="Fournisseur" />
+                                                <TableColumn fx:id="col_facture_date" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="Date Facture" />
+                                                <TableColumn fx:id="col_facture_num" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="Numero Facture" />
+                                                <TableColumn fx:id="col_facture_montant" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="Montant Facture Reste" />
+                                                <TableColumn fx:id="col_facture_montant_primaire" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="Montant Facture Primaire" />
+                                                <TableColumn fx:id="col_facture_bc" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="BC" />
+                                                <TableColumn fx:id="col_facture_br" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="BR" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="50.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#btnAjouterFacture" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: GREEN;" text="AJOUTER" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets right="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Tahoma" size="15.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" onAction="#btnSupprimerFacture" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: RED;" text="SUPPRIMER" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets right="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Tahoma" size="15.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" onAction="#btnModifierFacture" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: GREY;" text="MODIFIER" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets right="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Tahoma" size="15.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" onAction="#btnClearFactureFields" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: ORANGE;" text="VIDER" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Tahoma" size="15.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <TextField fx:id="tf_facture_search" prefHeight="35.0" prefWidth="200.0" promptText="Rechercher">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets top="20.0" />
+                                             </BorderPane.margin>
+                                          </HBox>
+                                       </top>
+                                       <BorderPane.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </BorderPane.margin>
+                                       <bottom>
+                                          <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="50.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#btnImprimerFactures" prefWidth="100.0" text="IMPRIMER">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" prefWidth="100.0" text="EXPORT">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Label text="TOTALE FACTURE RESTANT : ">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="lb_montant_facture_total_restant" text="0.00" textFill="#0abc01">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_RIGHT" layoutX="500.0" layoutY="10.0" maxWidth="1.7976931348623157E308">
+                                                   <children>
+                                                      <Label text="TOTALE FACTURE PRIMAIRE : ">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="lb_montant_facture_total" text="0.00" textFill="#0abc01">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets bottom="20.0" />
+                                             </BorderPane.margin>
+                                          </HBox>
+                                       </bottom>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-font-size: 20; -fx-padding: 10;" text="FOURNISSEUR">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <left>
+                                    <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="300.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label prefWidth="250.0" text="Code Fournisseur :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="code_fournisseur" maxWidth="-Infinity" onKeyReleased="#CodeFournisseurExiste" prefWidth="250.0" />
+                                                <Label fx:id="lb_code_fournisseur_existe" prefWidth="250.0" text="Deja Existe !!!!!!" textFill="RED" visible="false">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label prefWidth="250.0" text="Fournisseur :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="fournisseur" maxWidth="-Infinity" prefWidth="250.0" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label prefWidth="250.0" text="Adresse :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="adresse" maxWidth="-Infinity" prefWidth="250.0" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label prefWidth="250.0" text="Numero Telephone :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="num_telephone" maxWidth="-Infinity" prefWidth="250.0" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label prefWidth="250.0" text="Code Fiscale :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="code_fiscale" maxWidth="-Infinity" prefWidth="250.0" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label maxWidth="-Infinity" prefWidth="250.0" text="N° de Registre Commerce :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="num_registre_commerce" maxWidth="-Infinity" prefWidth="250.0" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="423.0">
+                                             <children>
+                                                <Label maxWidth="-Infinity" prefWidth="250.0" text="Article Positif :">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="article_positif" maxWidth="-Infinity" prefWidth="250.0" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </left>
+                                 <center>
+                                    <BorderPane BorderPane.alignment="CENTER">
+                                       <top>
+                                          <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="50.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#BtnAjouterFournisseur" prefHeight="35.0" prefWidth="115.0" style="-fx-text-fill: WHITE; -fx-background-color: GREEN;" text="AJOUTER">
+                                                         <HBox.margin>
+                                                            <Insets right="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Tahoma" size="15.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" onAction="#BtnSupprimerFournisseur" prefHeight="35.0" prefWidth="115.0" style="-fx-text-fill: WHITE; -fx-background-color: RED;" text="SUPPRIMER">
+                                                         <font>
+                                                            <Font name="Tahoma" size="15.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="5.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" onAction="#BtnModifierFournisseur" prefHeight="35.0" prefWidth="115.0" style="-fx-text-fill: WHITE; -fx-background-color: GREY;" text="MODIFIER">
+                                                         <font>
+                                                            <Font name="Tahoma" size="15.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="5.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" onAction="#BtnClearFieldsFournisseur" prefHeight="35.0" prefWidth="115.0" style="-fx-text-fill: WHITE; -fx-background-color: ORANGE;" text="VIDER" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Tahoma" size="15.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <TextField fx:id="tf_fournisseur_search" prefHeight="35.0" prefWidth="200.0" promptText="Rechercher">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets top="20.0" />
+                                             </BorderPane.margin>
+                                          </HBox>
+                                       </top>
+                                       <BorderPane.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </BorderPane.margin>
+                                       <bottom>
+                                          <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="50.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#btnImprimerFournisseurs" prefWidth="200.0" text="IMPRIMER">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" prefWidth="200.0" text="EXPORT EXCEL">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets bottom="20.0" />
+                                             </BorderPane.margin>
+                                          </HBox>
+                                       </bottom>
+                                       <center>
+                                          <TableView fx:id="tbview_fournisseur" onMouseClicked="#MouseSelectFournisseur" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn fx:id="col_code_fournisseur" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" text="Code Fournisseur" />
+                                                <TableColumn fx:id="col_fournisseur" maxWidth="1.7976931348623157E308" minWidth="120.0" prefWidth="300.0" text="Fournisseur" />
+                                                <TableColumn fx:id="col_adresse" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="300.0" text="Adresse" />
+                                                <TableColumn fx:id="col_num_telephone" maxWidth="1.7976931348623157E308" minWidth="80.0" prefWidth="200.0" text="N° Telephone" />
+                                                <TableColumn fx:id="col_code_fiscale" maxWidth="1.7976931348623157E308" minWidth="80.0" prefWidth="200.0" text="Code Fiscale" />
+                                                <TableColumn fx:id="col_num_registre_commerce" maxWidth="1.7976931348623157E308" minWidth="110.0" prefWidth="200.0" text="N° Registre Commerce" />
+                                                <TableColumn fx:id="col_article_positif" maxWidth="1.7976931348623157E308" minWidth="80.0" prefWidth="250.0" text="Article Positif" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-font-size: 20; -fx-padding: 10;" text="ABOUT US">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+         <top>
+            <HBox alignment="CENTER_LEFT" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo_sotrob.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-background-color: WHITE;" text="LOGICIEL D'AFFECTATION FACTURES ET CHEQUES SOTROB" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
